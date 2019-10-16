@@ -7,7 +7,7 @@ The visual was created using Flourish, a data visualization and storytelling pla
 
 ### Methodology
 - Create list of rappers and rap groups from [Wikipedia](https://en.wikipedia.org/wiki/List_of_hip_hop_musicians) 
-- Scrape [kworb.net](https://kworb.net/spotify/artists.html), a music data site, for a list of the top 10,000 artists on Spotify
-- Use fuzzy match to determine which of the 10K kworb.net artists fell into the Wikipedia rap bucket
+- Scrape [kworb.net](https://kworb.net/spotify/artists.html), a music data site, for list of top 10,000 artists on Spotify
+- Use fuzzy match to determine which of the 10K kworb.net artists fell into the Wikipedia-defined rap bucket
 - Scrape song-level artist streaming data from [kworb.net](https://kworb.net/spotify/artists.html), which lists any artists featured on a song
-- Pivot to calculate “collaboration counts” between artists (the “node” dataset for the network chart)
+- Pivot to calculate “collaboration counts” between artists (which froms the “node” dataset for the network chart)
