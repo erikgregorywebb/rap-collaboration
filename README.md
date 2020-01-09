@@ -1,6 +1,6 @@
 # A Brief Study of Collaboration in Rap Music
 
-I love music, especially rap. In the world of rap, almost nothing beats hearing two or more of your favorite artists team up on a song. A well-placed guest verse can launch a career. Looking to systematically analyze collaboration in rap, I compiled a dataset of 500+ hip-hop artists and x+ tracks to understand which of my favorite rappers enjoy working with each other.
+I love music, especially rap. In the world of rap, almost nothing beats hearing two or more of your favorite artists team up on a song. A well-placed guest verse can launch a career. Looking to systematically analyze collaboration in rap, I compiled a dataset of 559 hip-hop artists and 13,358 tracks to understand which of my favorite rappers enjoy working with each other.
 
 ### Visualization
 The visual was created using Flourish, a data visualization and storytelling platform. Click here for a live version.
