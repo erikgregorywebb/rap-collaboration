@@ -92,14 +92,19 @@ links = all_tracks %>%
   group_by(Artist, With) %>%
   count(sort = T)
 
+#links = links %>% filter(n > 3)
+
 # rename nodes
 nodes = top_rap_artists
+
+#nodes = top_rap_artists %>% filter(name %in% links$Artist | name %in% links$With)
 
 write_csv(nodes, 'nodes.csv')
 write_csv(links, 'links.csv')
 
 
-
+# visualize
+# http://rstudio-pubs-static.s3.amazonaws.com/342197_166c88e0abf0466887d417ff88dcc79b.html
 
 graph = graph.data.frame(links, directed = F)
 graph = simplify(graph)
@@ -113,5 +118,19 @@ edges <- get.data.frame(graph, what="edges")[1:2]
 
 visNetwork(nodes, edges) %>%
   visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE)
+
+plot(graph)
+
+communities_detected = do.call(rbind, Map(data.frame, A=list(fc$membership)[[1]], B=list(fc$names)[[1]])) %>% 
+  as.data.frame()
+
+
+communities_detected %>% arrange(A)
+communities_detected %>% 
+  group_by(A) %>% count(sort = T) %>% head(30)
+
+
+
+
 
 
